@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-charge-sheet',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChargeSheetComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private http: Http) { }
+  httpdata;
   ngOnInit() {
+    this.http.get("http://localhost:3000/api/chargesheet").map((response) => response.json()).
+      subscribe((data) => console.log(data))
   }
-
-}
+}  

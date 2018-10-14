@@ -2,7 +2,7 @@
     width:50%;
     height: 100%;
     margin-bottom: 20px;
-    background-color: rgb(177, 239, 241);
+    background-color: hsl(61, 91%, 50%);
 }
 .prisoner input[type="submit"]
 {   width: 20%;;
@@ -22,7 +22,7 @@
 }
 .prisoner p{
     margin:10px;
-    color:purple;
+    color:rgb(49, 0, 128);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     padding:0;
@@ -32,7 +32,7 @@
 {
     border:none;
     padding: 0.4em 0.25em;
-    width:80%;
+    width:40%;
     color: #fc0707;
     font-size: 1.55em;
     border-radius: 30px;
