@@ -47,12 +47,11 @@ function getSingleProfile(req, res, next) {
     });
 }
 
-function createProfile(req, res, next) {
-    console.log("CRETE TOPIC");
+function createComplaint(req, res, next) {
+    console.log("CRETE complaint");
     console.log(req.body);
-    var sql = "INSERT INTO profiles (user_id, created_date,display_name,last_login,account_type,rank,score,favourite,likes,dislikes) VALUES (?,?,?,?,?,?,?,?,?,?)";
-    //var sql = "INSERT INTO profiles (user_id) VALUES (req.body.user_id)";
-    var vals = [req.body.user_id, req.body.created_date, req.body.display_name, req.body.last_login, req.body.account_type, req.body.rank, req.body.score, req.body.favourites, req.body.likes, req.body.dislikes];
+    var sql = "INSERT INTO complaint (Accuse_name, complaint_description,complaint_type,Date,Location,Time) VALUES (?,?,?,?,?,?)";
+    var vals = [req.body.Accuse_name, req.body.complaint_description, req.body.complaint_type, req.body.Date, req.body.Location, req.body.Time];
     db.query(sql, vals, function (err, rows, fields) {
         if (err) {
             var message;
@@ -79,9 +78,10 @@ function createProfile(req, res, next) {
 }
  
 
-function deleteProfile(req, res, next) {
+function deleteComplaint(req, res, next) {
     console.log("get single topic " + parseInt(req.params.id));
-    db.query(sql, req.params.id, function (err, rows, fields) {
+var sql="delete from complaint where  complaint_num = ?"
+    db.query(sql, [req.params.id], function (err, rows, fields) {
         if (err) {
             res.status(500)
                 .json({
@@ -126,8 +126,8 @@ function updateProfile(req, res, next) {
 module.exports = {
     getSingleProfile: getSingleProfile,
     getAllComplaint: getAllComplaint,
-    createProfile: createProfile,
-    deleteProfile: deleteProfile,
+    createComplaint: createComplaint,
+    deleteComplaint: deleteComplaint,
     updateProfile: updateProfile
 };
 

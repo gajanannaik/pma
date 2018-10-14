@@ -14,9 +14,10 @@ router.use(function(req, res, next) {
   
 
 router.get('/api/complaint', complaint.getAllComplaint);
-//router.post('/api/profiles', profiles.createProfile);
-//router.get('/api/profiles/:id', profiles.getSingleProfile);
-//router.delete('/api/profiles/:id', profiles.deleteProfile);
+router.post('/api/complaint', complaint.createComplaint);
+//router.get('/api/complaint/:id', profiles.getSingleProfile);
+router.delete('/api/complaint/:id', complaint.deleteComplaint);
+//router.get('/api/complaint/:id', profiles.getSingleProfile);
 //router.put('/api/profiles/:id', profiles.updateProfile);
 
 module.exports = router;

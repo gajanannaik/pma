@@ -1,10 +1,9 @@
- 
-  <h1>Complaint-register</h1>
+<h1>Complaint-register</h1>
 
-  
 
- <table border="1" style="padding:5px;" >
-  <tr *ngFor = "let row of httpdata" >
+
+<table border="1" style="padding:5px color=88;">
+  <tr *ngFor="let row of httpdata">
     <td>{{ row.complaint_num }}</td>
     <td>{{ row.complaint_type }}</td>
     <td>{{ row.Accuse_name }}</td>
@@ -12,22 +11,50 @@
     <td>{{ row.Date}}</td>
     <td>{{ row.Time }}</td>
     <td>{{ row.complaint_description }}</td>
-    
+    <td><button value="Delete" (click)="deleteComplaint(row.complaint_num)">Delete</button></td>
+
   </tr>
 </table>
 
-  <div class= "complaint-register working-area">
+<div class="complaint-register working-area">
 
-   
-    <form action ="/" id="mycomplaint">
-      <p>Complaint Number:</p> <input type="number" name="ComplaintNo" placeholder="enter the complaint no">
-      <p> Type:</p><input type="text" name="ComplaintType" placeholder="enter the complaint"><br>
-      <p> Accuse_name:</p><input type="text" name="AccuseName" placeholder="enter the Accuse Name"><br>
-      <p> Location:</p><input type="text" name="Location" placeholder="enter the location"><br>
-      <p> Date:</p><input type="datetime-local" name="Date" placeholder="enter the Date"><br>
-      <p> Time:</p><input type="time" name="Time" placeholder="enter the Time"><br>
-      <p>Complaint Description:</p> <input type="text" name="ComplaintDesc" placeholder="enter the complaint Description"><br>
-      <input type="submit" name="submit" value="Submit"><br>
-    </form>
-  </div>
+
+  <table   style="padding:5px;">
+    <tr>
+      <td>Complaint Number: </td>
+      <td><input type="number" name="ComplaintNo" placeholder="enter the complaint no"></td>
+    </tr>
+    <tr>
+      <td>Type:</td>
+      <td><input type="text" name="ComplaintType" placeholder="enter the complaint"></td>
+    </tr>
+    <tr>
+      <td>Accuse_name: </td>
+      <td><input type="text" name="AccuseName" placeholder="enter the Accuse Name"><br></td>
+    </tr>
+    <tr>
+      <td>Location:</td>
+      <td><input type="text" name="Location" placeholder="enter the location"></td>
+    </tr>
+    <tr>
+      <td>Date :</td>
+      <td><input type="datetime-local" name="Date" placeholder="enter the Date"></td>
+    </tr>
+    <tr>
+      <td>Time :</td>
+      <td>
+        <input type="text" name="timedes" placeholder="enter the complaint time">
+      </td>
+    </tr>
+    <tr>
+      <td>Complaint Description :</td>
+      <td>
+        <input type="text" name="ComplaintDesc" placeholder="enter the complaint Description">
+      </td>
+    </tr>
+  </table>
+
  
+  <input type="submit" name="submit" value="Submit"><br>
+
+</div>

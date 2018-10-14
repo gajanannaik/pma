@@ -1,0 +1,96 @@
+{
+	"variables": [],
+	"info": {
+		"name": "pma_api",
+		"_postman_id": "bf7cbb93-4da1-2dc5-4827-247f74b90f5f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GETcomplaint",
+			"request": {
+				"url": "http://localhost:3000/api/complaint",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST complaint",
+			"request": {
+				"url": "http://localhost:3000/api/complaint",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "complaint_num\n",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "complaint_type",
+							"value": "robbery",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Accuse_name",
+							"value": "gajanan",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Location",
+							"value": "santeguli",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Date",
+							"value": "13/10/2018",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Time",
+							"value": "2:0Am",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "complaint_description",
+							"value": "robbery has been happend at night",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE complaint",
+			"request": {
+				"url": "http://localhost:3000/api/complaint",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
