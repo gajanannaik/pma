@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 @Component({
   selector: 'complaint-register',
@@ -27,5 +29,25 @@ export class ComplaintRegisterComponent implements OnInit {
 
      
   }
+    cData= {
+    complaint_type:"",
+Accuse_name:"",
+Location:"Nagavara",
+Date:"",
+Time:"",
+complaint_description:"",
+  } 
+  /** POST: add a new hero to the database */
+  addComplaint() {
+   // alert("addComplaint");
+
+    this.http.post("http://localhost:3000/api/complaint",this.cData).map((response) => response.json()).
+    subscribe((data) =>{this.deleteResponse=data;
+    this.loadComplaints();
+    }); 
+  }
+
+
+
    
 }

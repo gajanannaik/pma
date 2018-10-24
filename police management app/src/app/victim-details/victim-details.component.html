@@ -1,17 +1,38 @@
  
   <h1>Victim-Details</h1>
+  <table border="1" style="padding:5px;">
+    <tr *ngFor="let row of httpdata">
+      <td>{{ row.Victim_id }}</td>
+      <td>{{ row.Name }}</td>
+      <td>{{ row.Address }}</td>
+      <td>{{ row.Phone_Number }}</td>
+      <td>{{ row.Gender}}</td>
+      <td>{{ row.complaint_no }}</td>
+      <td><button value="Delete" (click)="deleteVictim(row.Victim_id)">Delete</button></td>
   
+    </tr>
+  </table>
   <div class= "victim working-area">
 
-    
-      <form action ="/" id="myVictim">
-        <p>Victim id:</p> <input type="number" name="victimId" placeholder="enter the victim id">
-        <p>Victim Name:</p> <input type="text" name="victimName" placeholder="enter the victim name">
-        <p>Victim adress:</p> <input type="text" name="victimAdress" placeholder="enter the victim adress">
-        <p>Victim phonenumber:</p> <input type="t" name="victimNo" placeholder="enter the victim phonenumber">
-        <p>Victim Gender:</p> <input type="text" name="victimGender" placeholder="enter the victim Gender">
-        <p>Victim complaint number:</p> <input type="number" name="victimComplaintNo" placeholder="enter the victim complaintnumber"><br>
-        <input type="submit" name="submit" value="Submit"><br>
-         </form>
+    <table style="padding:5px;">
+        <tr>
+        <td>Victim Name:<input type="text" [(ngModel)]="vData.Name" placeholder="enter the victim name"></td>
+        </tr>
+        <tr>
+      <td>Victim adress:<input type="text" [(ngModel)]="vData.Address" placeholder="enter the victim adress"></td>
+      </tr>
+      <tr>
+        <td>Victim phonenumber:<input type="text" [(ngModel)]="vData.Phone_Number" placeholder="enter the victim phonenumber"></td>
+        </tr>
+        <tr>
+        <td>Victim Gender:<input type="text" [(ngModel)]="vData.Gender" placeholder="enter the victim Gender"></td>
+        </tr>
+        <tr>
+        <td>Victim complaint number:<input type="number"[(ngModel)]="vData.complaint_no" placeholder="enter the victim complaintnumber"></td>
+        </tr>
+        
+        </table>
+        <input type="submit" (click)="addVictim()" name="submit" value="Submit"><br>
+
         </div>
     

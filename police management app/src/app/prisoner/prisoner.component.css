@@ -32,9 +32,7 @@
 {
     border:none;
     padding: 0.4em 0.25em;
-    width:40%;
+    width:100%;
     color: #fc0707;
-    font-size: 1.55em;
-    border-radius: 30px;
-    transform: translate3d(0, +0.5em, 0);
+   
     }

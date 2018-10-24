@@ -1,16 +1,40 @@
- 
- 
-  <h1>Charge-sheet Details</h1>
-  <div class= "chargesheet working-area">
+<h1>Charge-sheet Details</h1>
+<table border="1" style="padding:5px;">
+  <tr *ngFor="let row of httpdata">
+    <td>{{ row.complaint_num }}</td>
+    <td>{{ row.complaint_type }}</td>
+    <td>{{ row.Accuse_name }}</td>
+    <td>{{ row.Location }}</td>
+    <td>{{ row.Date}}</td>
+    <td>{{ row.Time }}</td>
+    <td>{{ row.complaint_description }}</td>
+    <td><button value="Delete" (click)="deleteChargesheet(row.complaint_num)">Delete</button></td>
 
+  </tr>
+</table>
+<div class="chargesheet working-area">
+
+
+  <table style="padding:5px;">
+    <tr>
+      <td>chargesheet Number:<input type="number" [(ngModel)]="cData.charge_sheet_no" placeholder="Enter the chargesheetno"></td>
+    </tr>
+    <tr>
+        <td>Date:<input type="date" [(ngModel)]="cData.chargesheet_date" placeholder="Enter the Date"></td>
+      </tr>
    
-    <form action ="/" id="myChargeSheet">
-      <p>chargesheet Number:</p> <input type="number" name="ChargeshhetNo" placeholder="Enter the chargesheetno">
-      <p>Name:</p><input type="text" name="ChargeSheetName" placeholder="Enter the Name"><br>
-      <p> Time:</p><input type="time" name="Time" placeholder="Enter the Time"><br>
-      <p> Date:</p><input type="datetime-local" name="Date" placeholder="Enter the Date"><br>
-      <p> Crime:</p><input type="text" name="crime" placeholder="Enter the crime he did"><br>
-      <input type="submit" name="submit" value="Submit"><br>
-    </form>
-  </div>
- 
+    <tr>
+      <td>Time:<input type="time" [(ngModel)]="cData.Time" placeholder="Enter the Time"></td>
+    </tr>
+    <tr>
+        <td>Name:<input type="text" [(ngModel)]="cData.Name" placeholder="Enter the Name"></td>
+      </tr>
+    
+    <tr>
+      <td>Crime:<input type="text" [(ngModel)]="cData.crime" placeholder="Enter the crime he did"></td>
+    </tr>
+   
+  </table>
+  <input type="submit" (click)="submit" value="Submit"><br>
+  
+</div>

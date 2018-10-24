@@ -2,7 +2,7 @@
 
 
 
-<table border="1" style="padding:5px color=88;">
+<table border="1" style="padding:5px;">
   <tr *ngFor="let row of httpdata">
     <td>{{ row.complaint_num }}</td>
     <td>{{ row.complaint_type }}</td>
@@ -20,41 +20,38 @@
 
 
   <table   style="padding:5px;">
-    <tr>
-      <td>Complaint Number: </td>
-      <td><input type="number" name="ComplaintNo" placeholder="enter the complaint no"></td>
-    </tr>
+  
     <tr>
       <td>Type:</td>
-      <td><input type="text" name="ComplaintType" placeholder="enter the complaint"></td>
+      <td><input type="text" [(ngModel)]="cData.complaint_type" placeholder="enter the complaint"></td>
     </tr>
     <tr>
       <td>Accuse_name: </td>
-      <td><input type="text" name="AccuseName" placeholder="enter the Accuse Name"><br></td>
+      <td><input type="text"   [(ngModel)]="cData.Accuse_name" placeholder="enter the Accuse Name"><br></td>
     </tr>
     <tr>
       <td>Location:</td>
-      <td><input type="text" name="Location" placeholder="enter the location"></td>
+      <td><input type="text" [(ngModel)]="cData.Location" placeholder="enter the location"></td>
     </tr>
     <tr>
       <td>Date :</td>
-      <td><input type="datetime-local" name="Date" placeholder="enter the Date"></td>
+      <td><input type="date" [(ngModel)]="cData.Date" placeholder="enter the Date"></td>
     </tr>
     <tr>
       <td>Time :</td>
       <td>
-        <input type="text" name="timedes" placeholder="enter the complaint time">
+        <input type="text" [(ngModel)]="cData.Time" placeholder="enter the complaint time">
       </td>
     </tr>
     <tr>
       <td>Complaint Description :</td>
       <td>
-        <input type="text" name="ComplaintDesc" placeholder="enter the complaint Description">
+        <input type="text" [(ngModel)]="cData.complaint_description" placeholder="enter the complaint Description">
       </td>
     </tr>
   </table>
 
  
-  <input type="submit" name="submit" value="Submit"><br>
+  <input type="submit" (click)="addComplaint()" name="submit" value="Submit"><br>
 
 </div>

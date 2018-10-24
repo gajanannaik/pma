@@ -2,15 +2,25 @@
   <h1>Prisoner-Details</h1>
   <div class= "prisoner">
 
-    
-      <form action ="/" id="myPrisoner">
-        <p>Prisoner number:</p> <input type="number" name="PrisonerNo" placeholder="enter the Prisoner number">
-        <p>Cought Date:</p> <input type="date" name="PrisonerDate" placeholder="enter the date">
-        <p>Release Date:</p> <input type="date" name="PrReleaseDate" placeholder="enter the Release Date">
-        <p>year:</p> <input type="text" name="" placeholder="enter the year">
-        <p>Prisoner Name:</p> <input type="text" name="PrisonerName" placeholder="enter the Prisoner name">
-        <p>Crime he did:</p> <input type="text" name="CrimeType" placeholder="enter the Crime type"><br>
+      <table style="padding:5px;">
+        
+        <tr>
+       <td>Cought Date:<input type="date" [(ngModel)]="prData.Enter_date" placeholder="enter the date"></td>
+       </tr>
+       <tr>
+       <td>Release Date:<input type="date" [(ngModel)]="prData.Release_date" placeholder="enter the Release Date"></td>
+       </tr>
+       <tr>
+      <td>year:<input type="text" [(ngModel)]="prData.year" placeholder="enter the year"></td>
+      </tr>
+      <tr>
+        <td>Prisoner Name:<input type="text" [(ngModel)]="prData.prisoner_name" placeholder="enter the Prisoner name"></td>
+        </tr>
+        <tr>
+        <td>Crime he did:<input type="text" [(ngModel)]="prData.crime" placeholder="enter the Crime type"></td>
+        </tr>
+      </table>
         <input type="submit" name="submit" value="Submit"><br>
-        </form>
+        
         </div>
         

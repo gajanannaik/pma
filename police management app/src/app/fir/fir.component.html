@@ -1,18 +1,25 @@
- 
-  <h1>FIR-Details</h1>
-  <div class= "fir working-area">
+<h1>FIR-Details</h1>
+<div class="fir working-area">
 
-    
-      <form action ="/" id="myFir">
-         
-        <p>FIR number:</p> <input type="number" name="FirNo" placeholder="enter the Fir number">
-        <p>FIR Date:</p> <input type="date" name="FirDate" placeholder="enter the Fir date">
-        <p>FIR Time:</p> <input type="time" name="FirTime" placeholder="enter the Fir time">
-        
-        <p> complaint number:</p> <input type="number" name="PoliceComplaintNo" placeholder="enter the Police complaint number"><br>
-        <input type="submit" name="submit" value="Submit"><br>
-        </form>
-       
-        
-    </div>
-     
+
+  <table style="padding:5px;">
+    <tr>
+
+      <td>FIR number: <input type="number" [(ngModel)]="fData.Fir_no" placeholder="enter the Fir number"></td>
+    </tr>
+    <tr>
+      <td>FIR Date:<input type="date" [(ngModel)]="fData.Date" placeholder="enter the Fir date"></td>
+    </tr>
+    <tr>
+      <td>FIR Time: <input type="time" [(ngModel)]="fData.Time" placeholder="enter the Fir time"></td>
+    </tr>
+    <tr>
+
+      <td>Chargesheet number:<input [(ngModel)]="fData.number" name="chargsheet" placeholder="enter the Police complaint number"></td>
+    </tr>
+  </table>
+  <input type="submit" (click)="submit" value="Submit"><br>
+
+
+
+</div>
