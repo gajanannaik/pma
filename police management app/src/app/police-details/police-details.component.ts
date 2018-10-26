@@ -13,7 +13,7 @@ export class PoliceDetailsComponent implements OnInit {
   httpdata;
   deleteResponse;
    loadPolice() :void{
-    this.http.get("http://localhost:3000/api/fir").map((response) => response.json()).
+    this.http.get("http://localhost:3000/api/police").map((response) => response.json()).
     subscribe((data) =>{this.httpdata=data.data;
     console.log(this.httpdata)});
   }
@@ -30,15 +30,15 @@ export class PoliceDetailsComponent implements OnInit {
 }
 poData= {
   police_name:"",
-  Police_Address:"",
+  Police_Address:"Nagawara",
   phone_number:"",
   complaint_no:"",
-  Fir_no:"",
+  FIR_No:"",
 
 } 
 /** POST: add a new hero to the database */
-addComplaint() {
- // alert("addPolice");
+addPolice() {
+  alert("addPolice");
 
   this.http.post("http://localhost:3000/api/police",this.poData).map((response) => response.json()).
   subscribe((data) =>{this.deleteResponse=data;

@@ -23,4 +23,27 @@ export class ChargeSheetComponent implements OnInit {
   ngOnInit() {
    this.loadChargesheet();
   }
+  
+  deleteChargesheet(charge_sheet_no){
+    this.http.delete("http://localhost:3000/api/chargesheet/"+charge_sheet_no).map((response) => response.json()).
+    subscribe((data) =>{this.deleteResponse=data;
+    this.loadChargesheet();
+    });
+  }
+  cData= {
+charge_sheet_no:"",
+chargesheet_date:"",
+Time:"",
+Name:"",
+crime:"",
+  } 
+  /** POST: add a new hero to the database */
+  addChargesheet() {
+    alert("addChargesheet");
+
+    this.http.post("http://localhost:3000/api/chargesheet",this.cData).map((response) => response.json()).
+    subscribe((data) =>{this.deleteResponse=data;
+    this.loadChargesheet();
+    }); 
 }  
+}

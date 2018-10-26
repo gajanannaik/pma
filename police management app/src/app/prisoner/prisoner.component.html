@@ -1,5 +1,18 @@
 
   <h1>Prisoner-Details</h1>
+  <table border="1" style="padding:5px;">
+    <tr *ngFor="let row of httpdata">
+      <td>{{ row.prisoner_id }}</td>
+      <td>{{ row.Enter_date }}</td>
+      <td>{{ row.Release_date }}</td>
+      <td>{{ row.year }}</td>
+      <td>{{ row.prisoner_name}}</td>
+      <td>{{ row.crime }}</td>
+      
+      <td><button value="Delete" (click)="deletePrisoner(row.prisoner_id)">Delete</button></td>
+  
+    </tr>
+  </table>
   <div class= "prisoner">
 
       <table style="padding:5px;">
@@ -20,7 +33,7 @@
         <td>Crime he did:<input type="text" [(ngModel)]="prData.crime" placeholder="enter the Crime type"></td>
         </tr>
       </table>
-        <input type="submit" name="submit" value="Submit"><br>
+        <input type="submit" (click)="addPrisoner()" value="Submit"><br>
         
         </div>
         

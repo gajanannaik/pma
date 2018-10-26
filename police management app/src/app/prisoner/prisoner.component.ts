@@ -22,7 +22,13 @@ export class PrisonerComponent implements OnInit {
   ngOnInit() {
     this.loadPrisoner();
   }
+  deletePrisoner(prisoner_id){
+    this.http.delete("http://localhost:3000/api/prisoner/"+prisoner_id).map((response) => response.json()).
+    subscribe((data) =>{this.deleteResponse=data;
+    this.loadPrisoner();
+    });
 
+  }
   prData = {
     Enter_date:"",
     Release_date:"",
@@ -33,7 +39,7 @@ export class PrisonerComponent implements OnInit {
   }
   /** POST: add a new hero to the database */
   addPrisoner() {
-    // alert("addPrisoner");
+    //alert("addPrisoner");
  
      this.http.post("http://localhost:3000/api/prisoner",this.prData).map((response) => response.json()).
      subscribe((data) =>{this.deleteResponse=data;

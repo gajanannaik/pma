@@ -50,8 +50,8 @@ function getSingleProfile(req, res, next) {
 function createFir(req, res, next) {
     console.log("CRETE police_fir");
     console.log(req.body);
-    var sql = "INSERT INTO police_fir (FIR_no,Date,Time,Chargesheet_no) VALUES (?,?,?,?)";
-    var vals = [req.body.FIR_no, req.body.Date, req.body.Time, req.body.Chargesheet];
+    var sql = "INSERT INTO police_fir (Fir_no,Date,Time,Chargesheet_no) VALUES (?,?,?,?)";
+    var vals = [req.body.Fir_no, req.body.Date, req.body.Time, req.body.Chargesheet_no];
     db.query(sql, vals, function (err, rows, fields) {
         if (err) {
             var message;

@@ -1,14 +1,12 @@
 <h1>Charge-sheet Details</h1>
 <table border="1" style="padding:5px;">
   <tr *ngFor="let row of httpdata">
-    <td>{{ row.complaint_num }}</td>
-    <td>{{ row.complaint_type }}</td>
-    <td>{{ row.Accuse_name }}</td>
-    <td>{{ row.Location }}</td>
-    <td>{{ row.Date}}</td>
-    <td>{{ row.Time }}</td>
-    <td>{{ row.complaint_description }}</td>
-    <td><button value="Delete" (click)="deleteChargesheet(row.complaint_num)">Delete</button></td>
+    <td>{{ row.charge_sheet_no }}</td>
+    <td>{{ row.chargesheet_date }}</td>
+    <td>{{ row.Time}}</td>
+    <td>{{ row.Name }}</td>
+    <td>{{ row.crime }}</td>
+    <td><button value="Delete" (click)="deleteChargesheet(row.charge_sheet_no)">Delete</button></td>
 
   </tr>
 </table>
@@ -35,6 +33,6 @@
     </tr>
    
   </table>
-  <input type="submit" (click)="submit" value="Submit"><br>
+  <input type="submit" (click)="addchargesheet()" value="Submit"><br>
   
 </div>

@@ -4,7 +4,7 @@ var S = require('../util/status').getStatusMsg();
 var C = require('../util/constant').getConstantValue();
 
 
-function getAllpolice(req, res, next) {
+function getAllPolice(req, res, next) {
     console.log("getAllpolice");
     db.query('SELECT * FROM police', function (err, rows, fields) {
         if (err) {
@@ -47,11 +47,11 @@ function getSingleProfile(req, res, next) {
     });
 }
 
-function createpolice(req, res, next) {
+function createPolice(req, res, next) {
     console.log("CRETE police");
     console.log(req.body);
-    var sql = "INSERT INTO police (police-name,Police_address,phone_number,complaint_no,Fir_no) VALUES (?,?,?,?,?)";
-    var vals = [req.body.police_name, req.body.Police_Address, req.body.phone_number, req.body.complaint_no, req.body.Fir_no];
+    var sql = "INSERT INTO police (police-name,Police_address,phone_number,complaint_no,FIR_No) VALUES (?,?,?,?,?)";
+    var vals = [req.body.police_name, req.body.Police_Address, req.body.phone_number, req.body.complaint_no, req.body.FIR_No];
     db.query(sql, vals, function (err, rows, fields) {
         if (err) {
             var message;
@@ -78,7 +78,7 @@ function createpolice(req, res, next) {
 }
  
 
-function deletepolice(req, res, next) {
+function deletePolice(req, res, next) {
     console.log("get single topic " + parseInt(req.params.id));
 var sql="delete from police where  police_id = ?"
     db.query(sql, [req.params.id], function (err, rows, fields) {
@@ -125,9 +125,9 @@ function updateProfile(req, res, next) {
 
 module.exports = {
     getSingleProfile: getSingleProfile,
-    getAllpolice: getAllpolice,
-    createpolice: createpolice,
-    deletepolice: deletepolice,
+    getAllPolice: getAllPolice,
+    createPolice: createPolice,
+    deletePolice: deletePolice,
     updateProfile: updateProfile
 };
 

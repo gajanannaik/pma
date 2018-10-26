@@ -1,5 +1,18 @@
  
   <h1>Police-Details</h1>
+  <table border="1" style="padding:5px;">
+    <tr *ngFor="let row of httpdata">
+      <td>{{ row.police_id }}</td>
+      <td>{{ row.police_name }}</td>
+      <td>{{ row.Police_Address }}</td>
+      <td>{{ row.phone_number }}</td>
+      <td>{{ row.compliant_no}}</td>
+      <td>{{ row.FIR_No }}</td>
+      
+      <td><button value="Delete" (click)="deletePolice(row.police_id)">Delete</button></td>
+  
+    </tr>
+  </table>
   <div class= "police working-area">
 
     <table   style="padding:5px;">
@@ -22,9 +35,9 @@
          </tr>
          <tr>
         <td>FIR Number:</td>
-         <td><input type="number"  [(ngModel)]="poData.Fir_no" placeholder="enter the FIR number"></td>
+         <td><input type="number"  [(ngModel)]="poData.FIR_No" placeholder="enter the FIR number"></td>
          </tr>
       </table>
-      <input type="submit" name="submit" value="Submit"><br>
+      <input type="submit" (click)="adddPolice" value="Submit"><br>
         </div>
     

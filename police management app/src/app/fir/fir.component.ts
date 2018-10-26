@@ -28,7 +28,7 @@ export class FIRComponent implements OnInit {
 
 }
 fData= {
-  Fir_no :"",
+Fir_no :"",
  Date:"",
  Time :"",
  chargesheet_no:"",
@@ -36,7 +36,7 @@ fData= {
 }
 /** POST: add a new hero to the database */
 addFir() {
-  // alert("addFir");
+  alert("addFir");
 
    this.http.post("http://localhost:3000/api/fir",this.fData).map((response) => response.json()).
    subscribe((data) =>{this.deleteResponse=data;
