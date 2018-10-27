@@ -14,7 +14,7 @@ export class ComplaintRegisterComponent implements OnInit {
   deleteResponse;
    loadComplaints() :void{
     this.http.get("http://localhost:3000/api/complaint").map((response) => response.json()).
-    subscribe((data) =>{this.httpdata=data.data;
+    subscribe((data) =>{this.httpdata=data.data[0];
     console.log(this.httpdata)});
   }
   ngOnInit() {
