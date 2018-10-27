@@ -21,7 +21,7 @@ export class PoliceDetailsComponent implements OnInit {
   ngOnInit() {
     this.loadPolice();
   }
-  deletepolice(police_id){
+  deletePolice(police_id){
     this.http.delete("http://localhost:3000/api/police/"+police_id).map((response) => response.json()).
     subscribe((data) =>{this.deleteResponse=data;
     this.loadPolice();
@@ -32,13 +32,13 @@ poData= {
   police_name:"",
   Police_Address:"Nagawara",
   phone_number:"",
-  complaint_no:"",
+  compliant_no:"",
   FIR_No:"",
 
 } 
 /** POST: add a new hero to the database */
 addPolice() {
-  alert("addPolice");
+  //alert("addPolice");
 
   this.http.post("http://localhost:3000/api/police",this.poData).map((response) => response.json()).
   subscribe((data) =>{this.deleteResponse=data;

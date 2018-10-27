@@ -1,7 +1,5 @@
+<home-page></home-page>
 <h1>Complaint-register</h1>
-
-
-
 <table border="1" style="padding:5px;">
   <tr *ngFor="let row of httpdata">
     <td>{{ row.complaint_num }}</td>
@@ -23,35 +21,35 @@
   
     <tr>
       <td>Type:</td>
-      <td><input type="text" [(ngModel)]="cData.complaint_type" placeholder="enter the complaint"></td>
+      <td><input type="text" [(ngModel)]="cData.complaint_type" placeholder="Enter the complaint"></td>
     </tr>
     <tr>
       <td>Accuse_name: </td>
-      <td><input type="text"   [(ngModel)]="cData.Accuse_name" placeholder="enter the Accuse Name"><br></td>
+      <td><input type="text"   [(ngModel)]="cData.Accuse_name" placeholder="Enter the Accuse Name"><br></td>
     </tr>
     <tr>
       <td>Location:</td>
-      <td><input type="text" [(ngModel)]="cData.Location" placeholder="enter the location"></td>
+      <td><input type="text" [(ngModel)]="cData.Location" placeholder="Enter the location"></td>
     </tr>
     <tr>
       <td>Date :</td>
-      <td><input type="date" [(ngModel)]="cData.Date" placeholder="enter the Date"></td>
+      <td><input type="date" [(ngModel)]="cData.Date" placeholder="Enter the Date"></td>
     </tr>
     <tr>
       <td>Time :</td>
       <td>
-        <input type="text" [(ngModel)]="cData.Time" placeholder="enter the complaint time">
+        <input type="text" [(ngModel)]="cData.Time" placeholder="Enter the complaint time">
       </td>
     </tr>
     <tr>
       <td>Complaint Description :</td>
       <td>
-        <input type="text" [(ngModel)]="cData.complaint_description" placeholder="enter the complaint Description">
+        <input type="text" [(ngModel)]="cData.complaint_description" placeholder="Enter the complaint Description">
       </td>
     </tr>
   </table>
 
  
-  <input type="submit" (click)="addComplaint()" name="submit" value="Submit"><br>
+  <input type="submit" (click)="addComplaint()" name="submit" value="Create Complaint"><br>
 
 </div>

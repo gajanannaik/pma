@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'login', component: LoginModuleComponent },
   { path: 'homepage', component: HomePageComponent },
   { path: 'prisoner', component: PrisonerComponent },
+  { path: '**', redirectTo: '/login'  }
 ];
 
 @NgModule({

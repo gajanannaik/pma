@@ -6,7 +6,8 @@ var C = require('../util/constant').getConstantValue();
 
 function getAllComplaint(req, res, next) {
     console.log("getAllComplaint");
-    db.query('SELECT * FROM complaint', function (err, rows, fields) {
+  //  db.query('SELECT * FROM complaint', function (err, rows, fields) {
+   db.query('CALL getAllComplaint()', function (err, rows, fields) {
         if (err) {
             res.status(500)
                 .json({

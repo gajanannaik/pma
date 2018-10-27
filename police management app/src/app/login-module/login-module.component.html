@@ -7,12 +7,12 @@
 
 
     
-<form action ="/" id="mylogin">
-  <p>Username:</p> <input type="text" name="username" placeholder="enter the Username">
-  <p> Password:</p><input type="password" name="password" placeholder="enter the Password"><br>
-  <input type="submit" name="submit" value="Login"><br>
-  <a href="#">Forget Password</a>
+ 
+  <p>Username:</p> <input type="text"  [(ngModel)]="username" placeholder="enter the Username">
+  <p> Password:</p><input type="password"  [(ngModel)]="password" placeholder="enter the Password"><br>
+  <input type="button"  (click)="login()"  value="Login"><br>
    
-</form>
+   
+ 
 </div>
  

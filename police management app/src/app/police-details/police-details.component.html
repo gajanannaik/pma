@@ -1,4 +1,4 @@
- 
+<home-page></home-page> 
   <h1>Police-Details</h1>
   <table border="1" style="padding:5px;">
     <tr *ngFor="let row of httpdata">
@@ -19,25 +19,25 @@
       
         <tr>
        <td>Police Name:</td>
-        <td><input type="text"  [(ngModel)]="poData.police_name" placeholder="enter the Police name"></td>
+        <td><input type="text"  [(ngModel)]="poData.police_name" placeholder="Enter the Police name"></td>
          </tr>
          <tr>
        <td>Police adress:</td>
-       <td><input type="text"  [(ngModel)]="poData.Police_Address" placeholder="enter the Police adress"></td>
+       <td><input type="text"  [(ngModel)]="poData.Police_Address" placeholder="Enter the Police adress"></td>
        </tr>
        <tr>
        <td>Police phonenumber:</td>
-        <td><input type="number"  [(ngModel)]="poData.phone_number" placeholder="enter the Police phonenumber"></td>
+        <td><input type="number"  [(ngModel)]="poData.phone_number" placeholder="Enter the Police phonenumber"></td>
         </tr>
         <tr>
         <td>Police complaint number:</td>
-         <td><input type="number"  [(ngModel)]="poData.complaint_no" placeholder="enter the Police complaint number"></td>
+         <td><input type="number"  [(ngModel)]="poData.complaint_no" placeholder="Enter the Police complaint number"></td>
          </tr>
          <tr>
         <td>FIR Number:</td>
-         <td><input type="number"  [(ngModel)]="poData.FIR_No" placeholder="enter the FIR number"></td>
+         <td><input type="number"  [(ngModel)]="poData.FIR_No" placeholder="Enter the FIR number"></td>
          </tr>
       </table>
-      <input type="submit" (click)="adddPolice" value="Submit"><br>
+      <input type="submit" (click)="addPolice()" value="Add police"><br>
         </div>
     

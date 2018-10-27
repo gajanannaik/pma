@@ -1,12 +1,13 @@
+<home-page></home-page>
 <h1>FIR-Details</h1>
 <table border="1" style="padding:5px;">
   <tr *ngFor="let row of httpdata">
     <td>{{ row.Fir_no }}</td>
     <td>{{ row.Date }}</td>
     <td>{{ row.Time }}</td>
-    <td>{{ row.year }}</td>
-    <td>{{ row.prisoner_name}}</td>
-    <td>{{ row.crime }}</td>
+    
+    
+    <td>{{ row.Chargesheet_no }}</td>
     
     <td><button value="Delete" (click)="deleteFir(row.Fir_no)">Delete</button></td>
 
@@ -18,20 +19,20 @@
   <table style="padding:5px;">
     <tr>
 
-      <td>FIR number: <input type="number" [(ngModel)]="fData.Fir_no" placeholder="enter the Fir number"></td>
+      <td>FIR number: <input type="number" [(ngModel)]="fData.Fir_no" placeholder="Enter the Fir number"></td>
     </tr>
     <tr>
-      <td>FIR Date:<input type="date" [(ngModel)]="fData.Date" placeholder="enter the Fir date"></td>
+      <td>FIR Date:<input type="date" [(ngModel)]="fData.Date" placeholder="Enter the Fir date"></td>
     </tr>
     <tr>
-      <td>FIR Time: <input type="time" [(ngModel)]="fData.Time" placeholder="enter the Fir time"></td>
+      <td>FIR Time: <input type="time" [(ngModel)]="fData.Time" placeholder="Enter the Fir time"></td>
     </tr>
     <tr>
 
-      <td>Chargesheet number:<input [(ngModel)]="fData.Chargesheet_no" name="chargsheet" placeholder="enter the Police complaint number"></td>
+      <td>Chargesheet number:<input [(ngModel)]="fData.Chargesheet_no" name="chargsheet" placeholder="Enter the Police complaint number"></td>
     </tr>
   </table>
-  <input type="submit" (click)="addFir()" value="Submit"><br>
+  <input type="submit" (click)="addFir()" value="Create Fir"><br>
 
 
 

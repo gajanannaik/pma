@@ -1,4 +1,4 @@
- 
+<home-page></home-page>
   <h1>Victim-Details</h1>
   <table border="1" style="padding:5px;">
     <tr *ngFor="let row of httpdata">
@@ -16,23 +16,23 @@
 
     <table style="padding:5px;">
         <tr>
-        <td>Victim Name:<input type="text" [(ngModel)]="vData.Name" placeholder="enter the victim name"></td>
+        <td>Victim Name:<input type="text" [(ngModel)]="vData.Name" placeholder="Enter the victim name"></td>
         </tr>
         <tr>
-      <td>Victim adress:<input type="text" [(ngModel)]="vData.Address" placeholder="enter the victim adress"></td>
+      <td>Victim adress:<input type="text" [(ngModel)]="vData.Address" placeholder="Enter the victim adress"></td>
       </tr>
       <tr>
-        <td>Victim phonenumber:<input type="text" [(ngModel)]="vData.Phone_Number" placeholder="enter the victim phonenumber"></td>
+        <td>Victim phonenumber:<input type="text" [(ngModel)]="vData.Phone_Number" placeholder="Enter the victim phonenumber"></td>
         </tr>
         <tr>
-        <td>Victim Gender:<input type="text" [(ngModel)]="vData.Gender" placeholder="enter the victim Gender"></td>
+        <td>Victim Gender:<input type="text" [(ngModel)]="vData.Gender" placeholder="Enter the victim Gender"></td>
         </tr>
         <tr>
-        <td>Victim complaint number:<input type="number"[(ngModel)]="vData.complaint_no" placeholder="enter the victim complaintnumber"></td>
+        <td>Victim complaint number:<input type="number"[(ngModel)]="vData.complaint_no" placeholder="Enter the victim complaintnumber"></td>
         </tr>
         
         </table>
-        <input type="submit" (click)="addVictim()" name="submit" value="Submit"><br>
+        <input type="submit" (click)="addVictim()" name="submit" value="Create Victim"><br>
 
         </div>
     
